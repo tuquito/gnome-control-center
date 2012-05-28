@@ -1,0 +1,13 @@
+Index: gnome-control-center-3.3.91/panels/info/cc-info-panel.c
+===================================================================
+--- gnome-control-center-3.3.91.orig/panels/info/cc-info-panel.c	2012-03-05 20:02:43.000000000 +0100
++++ gnome-control-center-3.3.91/panels/info/cc-info-panel.c	2012-03-06 17:52:31.083083786 +0100
+@@ -1894,7 +1894,7 @@
+ {
+   GError *error;
+   error = NULL;
+-  g_spawn_command_line_async ("gpk-update-viewer", &error);
++  g_spawn_command_line_async ("update-manager", &error);
+   if (error != NULL)
+     {
+       g_warning ("unable to launch Software Updates: %s", error->message);
